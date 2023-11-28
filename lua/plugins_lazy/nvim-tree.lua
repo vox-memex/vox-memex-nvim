@@ -16,15 +16,15 @@ return {
             api.config.mappings.default_on_attach(bufnr)
 
             -- custom mappings
-            vim.keymap.set('n', '<leader>tt', vim.cmd.NvimTreeToggle)
-            vim.keymap.set('n', '<leader>tf', vim.cmd.NvimTreeFocus)
-            vim.keymap.set('n', '<leader>tc', vim.cmd.NvimTreeCollapse)
+            vim.keymap.set('n', '<leader>tt', '<Cmd>NvimTreeToggle<CR>')
+            vim.keymap.set('n', '<leader>tf', '<Cmd>NvimTreeFocus<CR>')
+            vim.keymap.set('n', '<leader>tc', '<Cmd>NvimTreeCollapse<CR>')
         end
 
         require('nvim-tree').setup {
             on_attach = my_on_attach,
             view = {
-              width = 35,
+              width = 40,
               number = true,
               relativenumber = true,
             }
